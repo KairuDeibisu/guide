@@ -1,3 +1,3 @@
 # Guide
 
-A cross-platform program that assist in designing, documenting, and remembering terminal commands.
+A cross-platform program that assists in designing, documenting, and remembering terminal commands.
