@@ -21,10 +21,12 @@
       {
           "name": "Windows",
           "includePath": [
+
               "${workspaceFolder}/src/**",
-              "${workspaceFolder}/build/stage/include/**",
+              "${workspaceFolder}/build/**",
               "${WXWIN}/include/**"
           ],
+
           "defines": [
               "__WXMSW__",
               "_UNICODE",
