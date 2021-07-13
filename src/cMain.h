@@ -8,6 +8,6 @@
 class cMain : public wxFrame
 {
 public:
-	cMain();
+	cMain(const wxString &title);
 	~cMain();
 };

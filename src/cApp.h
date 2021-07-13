@@ -14,7 +14,7 @@ public:
 	~cApp();
 
 private:
-	cMain *m_frame1 = nullptr;
+	cMain *m_frame = nullptr;
 
 public:
 	virtual bool OnInit();
