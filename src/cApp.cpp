@@ -2,6 +2,9 @@
 
 wxIMPLEMENT_APP(cApp);
 
+// Implements cApp& wxGetApp()
+wxDECLARE_APP(cApp);
+
 cApp::cApp()
 {
 }
