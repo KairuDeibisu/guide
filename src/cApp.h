@@ -10,12 +10,12 @@
 class cApp : public wxApp
 {
 public:
-	cApp();
-	~cApp();
+	cApp() = default;
+	~cApp() override = default;
 
 private:
 	cMain *m_frame = nullptr;
 
 public:
-	virtual bool OnInit();
+    bool OnInit() override;
 };

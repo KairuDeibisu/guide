@@ -8,9 +8,7 @@ cMain::cMain(const wxString &title) : wxFrame(nullptr, wxID_ANY, title)
     CreateStatusBar(NUMBER_OF_STATUS_BARS);
 }
 
-cMain::~cMain()
-{
-}
+cMain::~cMain() = default;
 
 // Create the top menu bar.
 void cMain::createMenuBar()

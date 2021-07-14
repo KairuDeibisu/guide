@@ -5,11 +5,11 @@
 #include <wx/wx.h>
 #endif
 
-class cMain : public wxFrame
+class cMain final : public wxFrame
 {
 public:
-	cMain(const wxString &title);
-	~cMain();
+	explicit cMain(const wxString &title);
+	~cMain() override;
 
 	void OnAbout(wxCommandEvent &event);
 	void OnQuit(wxCommandEvent &event);
