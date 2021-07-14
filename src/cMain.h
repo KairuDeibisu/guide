@@ -16,4 +16,5 @@ public:
 
 private:
 	void createMenuBar();
+	wxDECLARE_EVENT_TABLE();
 };

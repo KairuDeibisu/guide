@@ -6,9 +6,6 @@ cMain::cMain(const wxString &title) : wxFrame(nullptr, wxID_ANY, title)
 {
     createMenuBar();
     CreateStatusBar(NUMBER_OF_STATUS_BARS);
-
-    Bind(wxEVT_MENU, &cMain::OnAbout, this, wxID_ABOUT);
-    Bind(wxEVT_MENU, &cMain::OnQuit, this, wxID_EXIT);
 }
 
 cMain::~cMain()
@@ -51,3 +48,12 @@ void cMain::OnQuit(wxCommandEvent &event)
 {
     Close();
 }
+
+// clang-format off
+
+wxBEGIN_EVENT_TABLE(cMain, wxFrame)
+    EVT_MENU(wxID_ABOUT, cMain::OnAbout)
+    EVT_MENU(wxID_EXIT, cMain::OnQuit)
+wxEND_EVENT_TABLE()
+
+    // clang-format on

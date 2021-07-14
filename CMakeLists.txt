@@ -12,6 +12,7 @@ set(STAGED_INSTALL_PREFIX ${CMAKE_BINARY_DIR}/stage)
 
 add_subdirectory(vendor)
 add_subdirectory(Tests)
+add_subdirectory(src)
 
 include(ExternalProject)
 ExternalProject_Add(${PROJECT_NAME}_core
