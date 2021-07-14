@@ -1,8 +1,10 @@
 #include "cMain.h"
+#include "wx/splitter.h"
 
 static const size_t NUMBER_OF_STATUS_BARS = 2;
 
-cMain::cMain(const wxString &title) : wxFrame(nullptr, wxID_ANY, title)
+cMain::cMain(const wxString& title)
+    : wxFrame(nullptr, wxID_ANY, title)
 {
     createMenuBar();
     CreateStatusBar(NUMBER_OF_STATUS_BARS);
@@ -13,8 +15,8 @@ cMain::~cMain() = default;
 // Create the top menu bar.
 void cMain::createMenuBar()
 {
-    auto *fileMenu = new wxMenu;
-    auto *helpMenu = new wxMenu;
+    auto* fileMenu = new wxMenu;
+    auto* helpMenu = new wxMenu;
 
     helpMenu->Append(
         wxID_ABOUT,
@@ -26,7 +28,7 @@ void cMain::createMenuBar()
         wxT("E&xit\tAlt-X"),
         wxT("Quit the program."));
 
-    auto *menuBar = new wxMenuBar();
+    auto* menuBar = new wxMenuBar();
 
     menuBar->Append(fileMenu, wxT("&File"));
     menuBar->Append(helpMenu, wxT("&Help"));
@@ -34,7 +36,7 @@ void cMain::createMenuBar()
     SetMenuBar(menuBar);
 }
 
-void cMain::OnAbout(wxCommandEvent &event)
+void cMain::OnAbout(wxCommandEvent& event)
 {
     wxString msg;
 
@@ -42,7 +44,7 @@ void cMain::OnAbout(wxCommandEvent &event)
     wxMessageBox(msg, wxT("About Minimal"), wxOK | wxICON_INFORMATION, this);
 }
 
-void cMain::OnQuit(wxCommandEvent &event)
+void cMain::OnQuit(wxCommandEvent& event)
 {
     Close();
 }
@@ -50,8 +52,7 @@ void cMain::OnQuit(wxCommandEvent &event)
 // clang-format off
 
 wxBEGIN_EVENT_TABLE(cMain, wxFrame)
-    EVT_MENU(wxID_ABOUT, cMain::OnAbout)
-    EVT_MENU(wxID_EXIT, cMain::OnQuit)
+	EVT_MENU(wxID_ABOUT, cMain::OnAbout)
+	EVT_MENU(wxID_EXIT, cMain::OnQuit)
 wxEND_EVENT_TABLE()
-
     // clang-format on

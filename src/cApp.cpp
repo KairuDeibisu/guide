@@ -7,10 +7,10 @@ wxDECLARE_APP(cApp);
 
 bool cApp::OnInit()
 {
-	m_frame = new cMain("Guide");
-	m_frame->Show();
+    m_frame = new cMain("Guide");
+    m_frame->Show();
 
     SetTopWindow(m_frame);
 
-	return true;
+    return true;
 }
