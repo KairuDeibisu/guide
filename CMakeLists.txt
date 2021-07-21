@@ -10,5 +10,5 @@ set(wxWidgets_INCLUDE_DIRS ${PROJECT_SOURCE_DIR}/vendor/wxwidgets/include)
 set(wxWidgets_CONFIGURATION msw)
 
 add_subdirectory(vendor)
-add_subdirectory(tests)
+add_subdirectory(Tests)
 add_subdirectory(src)
