@@ -9,6 +9,5 @@ set(wxWidgets_LIB_DIR ${PROJECT_SOURCE_DIR}/vendor/wxwidgets/lib/vc_x64_lib)
 set(wxWidgets_INCLUDE_DIRS ${PROJECT_SOURCE_DIR}/vendor/wxwidgets/include)
 set(wxWidgets_CONFIGURATION msw)
 
-add_subdirectory(vendor)
 add_subdirectory(Tests)
 add_subdirectory(src)
