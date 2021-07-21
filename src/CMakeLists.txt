@@ -5,22 +5,14 @@ project(guide_core LANGUAGES CXX)
 set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-# hack for buggy CMake's FindwxWidgets script
-if (DEFINED ENV_WX_CONFIG)
-    set (ENV{WX_CONFIG} ${ENV_WX_CONFIG})
-endif()
-
 set(wxWidgets_USE_STATIC 1)
+find_package(wxWidgets REQUIRED COMPONENTS gl core base net)
 
-find_package(wxWidgets REQUIRED)
-
-set(SRCS 
+set(SRCS
     cMain.cpp
     cApp.cpp
 )
-
 include(${wxWidgets_USE_FILE})
-
 if (APPLE)
     # create bundle on apple compiles
     add_executable(main MACOSX_BUNDLE ${SRCS} )
